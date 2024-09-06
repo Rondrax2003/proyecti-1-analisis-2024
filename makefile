@@ -1,12 +1,12 @@
 .PHONY: all clean
 
 BANDERAS = -std=c++11 -Wall -g
-SALIDA = game
+SALIDA = test_1
 
 all: ejemplo
 
 ejemplo:
-	g++ $(BANDERAS) ahorcado.cpp main.cpp  -o $(SALIDA)
+	g++ $(BANDERAS) word.cpp archivist.cpp main.cpp  -o $(SALIDA)
 
 clean:
 	rm -r *.dSYM $(SALIDA)

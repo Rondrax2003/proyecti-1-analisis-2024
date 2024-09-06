@@ -28,7 +28,7 @@ int Ahorcado::menu(){
         switch (option)
         {
         case '1':
-            /* code */
+            newGame();
             break;
         case '2':
             /* code */
@@ -54,6 +54,7 @@ void Ahorcado::newGame(){
             clearTerminal();
             cout<<"::: A H O R C A D O :::"<<endl;
             Draw();
+            cout<<"lives: "<< lives<< endl;
             cout<<"erros:" <<errors<<endl;
             cout<<"insert letter: ";
             cin>>letter;
