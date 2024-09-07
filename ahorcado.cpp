@@ -1,5 +1,6 @@
 #include <iostream>
 #include "ahorcado.h"
+#include "archivist.h"
 using namespace std;
 
 char option;
@@ -48,8 +49,17 @@ int Ahorcado::menu(){
 }
 
 void Ahorcado::newGame(){
+    clearTerminal();
+    KarenArchivist.obtainLetters();
+    cout<<"inert name of player1: ";
+    cin>>player1;
+    cout<<"insert name of player2: ";
+    cin>>player2;
+    KarenArchivist.savePlayersNames(player1, player2);
+    KarenArchivist.showWord();
+    
 
-        while (lives > 0 )
+        /*while (lives > 0 )
         {
             clearTerminal();
             cout<<"::: A H O R C A D O :::"<<endl;
@@ -58,7 +68,7 @@ void Ahorcado::newGame(){
             cout<<"erros:" <<errors<<endl;
             cout<<"insert letter: ";
             cin>>letter;
-        }
+        }*/
         
 }
 void Ahorcado::Draw(){

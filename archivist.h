@@ -22,7 +22,7 @@ class Lector{//the atribut in chage of arding and sctracting data
         Lector(const string &fileName);
         ~Lector();
 
-  string leerArchivo();
+        string ReadFile();
 };
 
 class Archivist{/* that has the metodes of save game, 
@@ -35,6 +35,7 @@ load game and others methods of saved and loaded*/
     void obtainLetters();//create word
     void showWord();//show word
     void searchLetter(char value);
+    void savePlayersNames(string name1, string name2);
 };
 
 #endif
