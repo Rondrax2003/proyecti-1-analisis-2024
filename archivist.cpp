@@ -46,3 +46,8 @@ void Archivist::showWord(){
     AhorcadoWord.showWord();//method of wod that show list
 } 
 
+void Archivist::searchLetter(char value){
+    AhorcadoWord.searchLetter(value);
+}
+
+

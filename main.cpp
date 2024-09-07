@@ -12,6 +12,7 @@ int main(){
     Archivist myArchivist;//archivist 
     myArchivist.obtainLetters();//create list
     myArchivist.showWord();//show list
+    myArchivist.searchLetter('i');
 
     return 0;
 }

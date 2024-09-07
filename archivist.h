@@ -34,6 +34,7 @@ load game and others methods of saved and loaded*/
     public:
     void obtainLetters();//create word
     void showWord();//show word
+    void searchLetter(char value);
 };
 
 #endif

@@ -41,23 +41,29 @@ void Word::searchLetter(char value){
     Letter* current = this->start;
     int foundLetters = 0;
 
-    if(this->start->data == value){
-        cout<<"found letter"<<endl;
-    }else{
+
         while(current->next != nullptr){
             if(current->data == value){
                 cout<<"found letter :" << current->data<<endl;
                 foundLetters++;
                 current = current->next;
-            }else if(current->next == nullptr|| foundLetters <= 0 ){
-                /*aqui poner que le sume 1 a las vidas*/
-                cout<<"letter not found"<<endl;
             }else{
                 current=current->next;
             }
         }
+        if(current->next == nullptr && foundLetters == 0 ){
+            /*aqui poner que le sume 1 a las vidas*/
+            cout<<"letter not found"<<endl;
+            current = nullptr;
+            delete current;
+        }else if(current->next == nullptr && foundLetters !=0){
+            
+        }
+                
+            
+        cout<<foundLetters<<endl;
     }
-}
+
 
 void Word::showWord(){
     Letter* printer;
